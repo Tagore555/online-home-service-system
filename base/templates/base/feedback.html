@@ -1,0 +1,101 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="div-main" style="margin-top: 90px; margin-bottom: 70px;">
+    <form action="https://formspree.io/f/xyyqopvj" method="post">
+        {% csrf_token %}
+        <div class="in-column-outer">
+            <div class="outer-deatils">
+                <div class="inner-submit">
+                    FeedBack Form
+                </div>
+            </div>
+            <div class="in-column-inner">
+                <div class="in-row">
+                    <div class="label-outer">
+                        <div class="label-inner">
+                             Name :
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Email :
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Phone Number :
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Rating :
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            About Service :
+                        </div>
+                    </div>
+                </div>
+                <div class="in-row">
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="text" name="name" id="" />
+                        </div>
+                    </div>
+    
+    
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="email" name="email" id="" />
+                        </div>
+                    </div>
+    
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="number" name="phno" id="">
+                        </div>
+                    </div>
+                    <div class="input-outer">
+                        <div  class="input-inner" style="display: flex; justify-content: left; flex-direction: row; ">
+                           
+                                <div style="display: flex; justify-content: center; flex-direction: row; margin-right: 20px;">
+                                    <input type="radio" name="rating_value" value="1">
+                                    <label for="">1</label>
+                                </div>
+                                <div style="display: flex; justify-content: center; flex-direction: row; margin-right: 20px;">
+                                    <input type="radio" name="rating_value" value="2">
+                                    <label for="">2</label>
+                                </div>
+                                <div style="display: flex; justify-content: center; flex-direction: row; margin-right: 20px;">
+                                    <input type="radio" name="rating_value" value="3">
+                                    <label for="">3</label>
+                                </div>
+                                <div style="display: flex; justify-content: center; flex-direction: row; margin-right: 20px;">
+                                    <input type="radio" name="rating_value" value="4">
+                                    <label for="">4</label>
+                                </div>
+                                <div style="display: flex; justify-content: center; flex-direction: row; margin-right: 10px;">
+                                    <input type="radio" name="rating_value" value="5">
+                                    <label for="">5</label>
+                                </div>
+                            
+                        </div>
+                    </div>
+    
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <textarea name="address" id="" cols="22" rows="1"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="outer-submmit">
+                <div class="inner-submit">
+                    <input type="submit" name="pest_control_booknow" id="">
+                </div>
+            </div>
+        </div>       
+    </form>
+</div>
+{% endblock content %}

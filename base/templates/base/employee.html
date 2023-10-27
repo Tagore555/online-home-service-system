@@ -1,0 +1,119 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="div-main" style="margin-top: 65px; line-height: 1;">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="in-column-outer">
+            <div class="outer-deatils">
+                <div class="inner-submit">
+                    Employee Register Form
+                </div>
+            </div>
+            <div class="in-column-inner">
+                <div class="in-row">
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Enter Full Name :
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                                Enter Username Name :
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Phone Number :
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Email :
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Field of Repair
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Password :
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Confirm Password :
+                        </div>
+                    </div>
+                </div>
+                <div class="in-row">
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="text" name="fname" />
+                        </div>
+                    </div>
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="text" name="username" />
+                        </div>
+                    </div>
+        
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="number" name="phno" />
+                        </div>
+                    </div>
+    
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="email" name="email" id="">
+                        </div>
+                    </div>
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <select name="job" id="cars">
+                                <option value="tv">TV</option>
+                                <option value="geyser">GEYSER</option>
+                                <option value="refrigiter">REFRIGITER</option>
+                                <option value="washing_machine">WASHING MACHINE</option>
+                                <option value="microWave_oven">MICROWAVE OVEN</option>
+                                <option value="water_purifer">WATER PURIFIER</option>
+                        
+                                <option value="installation">AC INSTALLATION</option>
+                                <option value="uninstallation">AC UNINSTALLATION</option>
+                                <option value="ac_repair">AC REPAIR</option>
+                                <option value="gas_refill">AC GAS REFILL</option>
+                                <option value="wet_servicing">AC WET SERVICING</option>
+                                <option value="dry_servicing">AC DRY SERVICING</option>
+                        
+                                <option value="laundery">LAUNDERY</option>
+                                <option value="electrical">ELECTRICAL</option>
+                                <option value="pest_control">PEST CONTROL</option>
+                                <option value="carpentry">CARPENTRY</option>
+                                <option value="plumbing">PLUMBING</option>
+                                <option value="painnting">PAINTING</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="password" name="password">
+                        </div>
+                    </div>
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="password" name="confirm_password" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="outer-submmit">
+                <div class="inner-submit">
+                    <input type="submit" name="" id="">
+                </div>
+            </div>
+        </div>       
+    </form>
+</div>
+{% endblock content %}

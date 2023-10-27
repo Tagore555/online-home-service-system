@@ -1,0 +1,2202 @@
+{% extends 'main.html' %}
+{% block content %}
+<div>
+    
+    <div class="service-img-outer">
+        <div class="service-text-outer">
+            <a href="{% url 'home' %}">
+            <div class="service-text-inner">HOME</div>
+        </a>
+        </div>
+        <div class="service-img-inner">
+            <a href="{% url 'services' %}">
+            <img src="/static/services/service.avif" class="card-img-top i" alt="...">
+        </a>
+        </div>
+    </div>
+    <div class="first-3">
+        <div class="row row-cols-1 row-cols-md-4 g-4 hi">
+            <div class="col">
+                {% if application or tv or geyser or refrigiter or washing_machine or microwave_oven or water_purifier %}
+                <div class="card h-100" style="width: 22rem;">
+                    <img src="/static/services/application.png" class="card-img-top i" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Application Service</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="application" id="" value="Application Service"/>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  {% elif ac or homeneeds or installation or uninstallation or ac_reapir or gas_refill or wet_servicing or dry_servicing or laundery or electrical or pest_control or carpentry or plumbing or painnting%}
+                  {% else %}
+                  <div class="card h-100" style="width: 22rem;">
+                    <img src="/static/services/application.png" class="card-img-top i" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Application Service</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <div class="for-cost">
+                        <div class="for-form">
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                <input type="submit" name="application" id="" value="Application Service"/>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                  {% endif %}
+            </div>
+            <div class="col">
+                {% if ac or installation or uninstallation or ac_reapir or gas_refill or wet_servicing or dry_servicing %}
+                <div class="card h-100" style="width: 22rem;">
+                    <img src="/static/services/ac.jpg" class="card-img-top i" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Ac Service</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="ac" id="" value="Ac Service"/>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  {% elif homeneeds or application or tv or geyser or refrigiter or washing_machine or microwave_oven or water_purifier or laundery or electrical or pest_control or carpentry or plumbing or painnting %}
+                  {% else %}
+                  <div class="card h-100" style="width: 22rem;">
+                    <img src="/static/services/ac.jpg" class="card-img-top i" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Ac Service</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <div class="for-cost">
+                        <div class="for-form">
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                <input type="submit" name="ac" id="" value="Ac Service"/>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                  {% endif %}
+            </div>
+            <div class="col">
+                {% if homeneeds or laundery or electrical or pest_control or carpentry or plumbing or painnting %}
+                <div class="card h-100" style="width: 22rem;">
+                    <img src="/static/services/homeneeds.jpg" class="card-img-top i" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Home Needs</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="for-cost">
+                        <div class="for-form">
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                <input type="submit" name="homeneeds" id="" value="Home Needs"/>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                  {% elif ac or application or installation or uninstallation or ac_reapir or gas_refill or wet_servicing or dry_servicing or tv or geyser or refrigiter or washing_machine or microwave_oven or water_purifier %}
+                  {% else %}
+                  <div class="card h-100" style="width: 22rem;">
+                    <img src="/static/services/homeneeds.jpg" class="card-img-top i" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Home Needs</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <div class="for-cost">
+                        <div class="for-form">
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                <input type="submit" name="homeneeds" id="" value="Home Needs"/>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                  {% endif %}
+            </div>  
+        </div>
+    </div>
+    <div class="second-6*3">
+        <div class="application-6">
+            <div class="row row-cols-2 row-cols-md-4 g-4 hi">
+                <div class="col">
+                    {% if application or tv %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/tv.jpg" class="card-img-top i" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">TV</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="tv" id="" value="TV"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="col">
+                    {% if application or geyser %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/geyser.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Geyser</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="geyser" id="" value="Geyser"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="col">
+                    {% if application or refrigiter%}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/refrigerator.jpeg" class="card-img-top i" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Refrigiter</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="refrigiter" id="" value="Refrigiter"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="col">
+                    {% if application or washing_machine %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/washing_machine.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Washinng Machine</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="washing_machine" id="" value="Washinng machine"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="col">
+                    {% if application or microwave_oven %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/microwaven.jpeg" class="card-img-top i" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">MicroWave Oven</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="microwave_oven" id="" value="Microwave Oven"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="col">
+                    {% if application or water_purifier %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/water_purifier.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Water purifier</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="water_purifier" id="" value="Water purifier"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="ac-6">
+            <div class="row row-cols-2 row-cols-md-4 g-4 hi">
+                <div class="col">
+                    {% if ac or installation %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/ac-installation.jpeg" class="card-img-top i" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">AC INSTALLATION</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="installation" id="" value="INSTALLATION"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="col">
+                    {% if ac or uninstallation %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/ac-uninstallation.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">AC UNINSTALLATION</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="uninstallation" id="" value="UNINSTALLATION"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="col">
+                    {% if ac or ac_reapir %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/ac-repair.jpg" class="card-img-top i" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">AC REPAIR</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="ac_reapir" id="" value="AC REPAIR"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="col">
+                    {% if ac or gas_refill %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/ac-gas_refill.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">AC GAS REFILL</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="gas_refill" id="" value="GAS REFILL"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="col">
+                    {% if ac or wet_servicing %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/ac-wet_servicing.jpg" class="card-img-top i" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">AC WET SERVICING</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="wet_servicing" id="" value="WET SERVICING"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="col">
+                    {% if ac or dry_servicing %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/ac-dry_servicing.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">AC DRY SERVICING</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="dry_servicing" id="" value="DRY SERVICING"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="homeneeds-6">
+            <div class="row row-cols-2 row-cols-md-4 g-4 hi">
+                <div class="col">
+                    {% if homeneeds or laundery %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/laundery.jpeg" class="card-img-top i" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">LAUNDERY</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="laundery" id="" value="LAUNDERY"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="col">
+                    {% if homeneeds or electrical %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/electrical.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">ELECTRICAL</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="electrical" id="" value="ELECTRICAL"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="col">
+                    {% if homeneeds or pest_control %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/pest_control.jpeg" class="card-img-top i" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">PEST CONTROL</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="pest_control" id="" value="PEST CONTROL"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="col">
+                    {% if homeneeds or carpentry %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/carpentry.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">CARPENTRY</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="carpentry" id="" value="CARPENTRY"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="col">
+                    {% if homeneeds or plumbing %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/PLUMBING.jpeg" class="card-img-top i" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">PLUMBING</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="plumbing" id="" value="PLUMBING"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="col">
+                    {% if homeneeds or painnting %}
+                    <div class="card h-100" style="width: 22rem;">
+                        <img src="/static/services/painting.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">PAINTING</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="for-cost">
+                            <div class="for-form">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" name="painnting" id="" value="PAINTING"/>
+                                </form>
+                            </div>
+                            <div class="cost-outer">
+                                <div class="cost-inner">
+                                    Price: ₹500
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="third-6*3-register" >
+            <div class="div-main">
+                {% if tv %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="tv_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>           
+            <div class="div-main">
+                {% if geyser %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="geyser_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if refrigiter %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="refrigiter_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if washing_machine %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="washing_machine_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if microwave_oven %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="microwave_oven_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if water_purifier %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+    
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="water_purifier_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+
+            
+
+
+            <div class="div-main">
+                {% if installation %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="installation_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if uninstallation %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="uninstallation_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if ac_reapir %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="ac_reapir_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if gas_refill %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="gas_refill_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if wet_servicing %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="wet_servicing_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if dry_servicing %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="dry_servicing_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+
+
+
+            <div class="div-main">
+                {% if laundery %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="laundery_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if electrical %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="electrical_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if pest_control %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="pest_control_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if carpentry %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="carpentry_booknow" id="">
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if plumbing %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="plumbing_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+            <div class="div-main">
+                {% if painnting %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="in-column-outer">
+                        <div class="outer-deatils">
+                            <div class="inner-submit">
+                                Form
+                            </div>
+                        </div>
+                        <div class="in-column-inner">
+                            <div class="in-row">
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter First Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                            Enter Last Name :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Enter Username :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Email :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Phone Number :
+                                    </div>
+                                </div>
+                                <div class="label-outer">
+                                    <div class="label-inner">
+                                        Address :
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in-row">
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="fname" id="" />
+                                    </div>
+                                </div>
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="lname" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="text" name="name" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="email" name="email" id="" />
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <input type="number" name="phno" id="">
+                                    </div>
+                                </div>
+                
+                                <div class="input-outer">
+                                    <div  class="input-inner">
+                                        <textarea name="address" id="" cols="22" rows="1"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outer-submmit">
+                            <div class="inner-submit">
+                                <input type="submit" name="painnting_booknow" id="">
+                            </div>
+                        </div>
+                    </div>       
+                </form>
+                {% endif %}
+            </div>
+    </div>
+</div>
+{% endblock content %}

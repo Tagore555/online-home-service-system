@@ -1,0 +1,47 @@
+#main-logo{
+    display: flex;
+    justify-content: left;
+    border-radius: 20px;
+    height: 70px;
+    width: 130px;
+    background-color: black;
+
+}
+.hamburger-icon{
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: rgb(242, 241, 241);
+}
+.hello{
+    max-height: fit-content;
+    border-radius: 10px;
+}
+/*#home-id{
+    color: white;
+    font-size: 17px;
+}
+#about-id{
+    color: white;
+    font-size: 17px;
+}
+
+#service-id{
+    color: white;
+    font-size: 17px;
+}
+#feedback-id{
+    color: white;
+    font-size: 17px;
+}
+#logout-id{
+    color: white;
+    font-size: 17px;
+}
+#login-id{
+    color: white;
+    font-size: 17px;
+}
+#signup-id{
+    color: white;
+    font-size: 17px;
+}*/

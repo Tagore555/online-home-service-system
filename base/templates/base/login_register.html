@@ -1,0 +1,131 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if page == 'login' %}
+<div class="login-outer-div">
+    <div class="div-main">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="in-column-outer">
+                <div class="outer-deatils">
+                    <div class="inner-submit">
+                        Login Form
+                    </div>
+                </div>
+                <div class="in-column-inner">
+                    <div class="in-row">
+                        <div class="label-outer">
+                            <div class="label-inner">
+                                Username :
+                            </div>
+                        </div>
+                        <div class="label-outer">
+                            <div class="label-inner">
+                                Password :
+                            </div>
+                        </div>
+                    </div>
+                    <div class="in-row">
+                        <div class="input-outer">
+                            <div  class="input-inner">
+                                <input type="text" name="username" placeholder="Enter username"/>
+                            </div>
+                        </div>
+                        <div class="input-outer">
+                            <div  class="input-inner">
+                                <input type="password" name="password" placeholder="Enter password" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-submmit">
+                    <div class="inner-submit">
+                        <input type="Submit" value="Login" />
+                    </div>
+                </div>
+                <div class="p-signup">
+                    <div class="inner-p">
+                        <p>havenot signedup yet?</p>
+                    </div>
+                    <div>
+                        <a href="{% url 'register' %}">Sign up</a>
+                    </div>
+                </div>
+            </div>  
+        </form>
+    </div> 
+</div>
+{% else %}
+<div class="login-outer-div">
+<div class="div-main"> 
+    <form method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+        <div class="in-column-outer">
+            <div class="outer-deatils">
+                <div class="inner-submit">
+                    Register Form
+                </div>
+            </div>
+            <div class="in-column-inner">
+                <div class="in-row">
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Username :
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Password :
+                        </div>
+                    </div>
+                    <div class="label-outer">
+                        <div class="label-inner">
+                            Confirm Password :
+                        </div>
+                    </div>
+                </div>
+                <div class="in-row">
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="text" name="username" id="username"  required>
+                        </div>
+                    </div>
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="password" name="password" id="password" required>
+                        </div>
+                    </div>
+                    <div class="input-outer">
+                        <div  class="input-inner">
+                            <input type="password" name="confirm_password" id="confirm_password"  required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="outer-submmit">
+                <div class="inner-submit">
+                    <input type="submit" value="Register">
+                </div>
+            </div>
+            <div class="message-error">
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div class="p-signup">
+                <div class="inner-p">
+                    <p>Already signedup yet?</p>
+                </div>
+                <div>
+                    <a href="{% url 'login' %}">Login </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+{% endif %}
+{% endblock content %}
